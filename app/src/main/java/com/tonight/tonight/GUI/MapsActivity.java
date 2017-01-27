@@ -1,7 +1,9 @@
 package com.tonight.tonight.GUI;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -11,11 +13,13 @@ import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.tonight.tonight.Infra.GuiUtil;
 import com.tonight.tonight.R;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    GuiUtil guiUtil = GuiUtil.getGuiUtil();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,5 +52,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(recife2).title("Another Marker").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
         float zoomLevel = (float) 15.0;
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(recife, zoomLevel));
+    }
+
+    public void onButtonClick(View v) {
+        if(v.getId() == R.id.botaoPesquisar) {
+            Intent intent = new Intent(getApplicationContext(), SearchEventActivity.class);
+            startActivity(intent);
+        } else if(v.getId() == R.id.botaoCriar) {
+            guiUtil.toastShort(getApplicationContext(), "Oie!");
+        }
     }
 }

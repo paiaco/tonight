@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_search_event"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.tonight.tonight.GUI.SearchEventActivity">
+
+    <EditText
+        android:id="@+id/campoBuscaEventoRaio"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:maxLines="1"
+        android:layout_marginTop="18dp"
+        android:hint="Raio em Kilômetros"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"/>
+
+    <Spinner
+        android:id="@+id/spinTipoEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/tipo_evento"
+        android:layout_below="@+id/campoBuscaEventoRaio"
+        android:layout_marginTop="36dp"
+        android:layout_alignParentLeft="true"/>
+
+    <Spinner
+        android:id="@+id/spinGeneroEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/genero_evento"
+        android:layout_below="@+id/campoBuscaEventoRaio"
+        android:layout_alignParentRight="true"
+        android:layout_alignRight="@+id/spinTipoEvento"
+        android:layout_marginTop="36dp"/>
+
+    <Button
+        android:id="@+id/botaoBuscarPorRaio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        android:layout_marginTop="36dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/spinGeneroEvento"/>
+
+    <TextView
+        android:id="@+id/textOu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ou"
+        android:textSize="48sp"
+        android:layout_below="@+id/botaoBuscarPorRaio"
+        android:layout_marginTop="36dp"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/campoBuscaEventoNome"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textOu"
+        android:layout_marginTop="36dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:hint="Digite o nome do evento" />
+
+    <Button
+        android:id="@+id/botaoBuscarPorNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        android:layout_below="@+id/campoBuscaEventoNome"
+        android:layout_marginTop="36dp"
+        android:layout_centerHorizontal="true"/>
+
+
+
+
+
+</RelativeLayout>

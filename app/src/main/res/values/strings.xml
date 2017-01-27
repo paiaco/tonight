@@ -16,4 +16,14 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string-array name="tipo_evento">
+        <item>Show Musical</item>
+        <item>Peça de Teatro</item>
+        <item>Sarau literário</item>
+    </string-array>
+    <string-array name="genero_evento">
+        <item>Rock</item>
+        <item>Forró</item>
+        <item>Lambada</item>
+    </string-array>
 </resources>

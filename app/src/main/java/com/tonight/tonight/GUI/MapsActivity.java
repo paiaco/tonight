@@ -59,7 +59,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             Intent intent = new Intent(getApplicationContext(), SearchEventActivity.class);
             startActivity(intent);
         } else if(v.getId() == R.id.botaoCriar) {
-            guiUtil.toastShort(getApplicationContext(), "Oie!");
+            Intent intent = new Intent(getApplicationContext(), EventsActivity.class);
+            startActivity(intent);
         }
     }
 }

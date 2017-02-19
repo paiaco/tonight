@@ -1,4 +1,4 @@
-package com.tonight.tonight.GUI;
+package com.tonight.tonight.gui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-import com.tonight.tonight.Infra.GuiUtil;
+import com.tonight.tonight.infra.GuiUtil;
 import com.tonight.tonight.R;
 
 public class LoginActivity extends AppCompatActivity {

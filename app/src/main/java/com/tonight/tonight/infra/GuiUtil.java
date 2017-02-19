@@ -1,4 +1,4 @@
-package com.tonight.tonight.Infra;
+package com.tonight.tonight.infra;
 
 import android.content.Context;
 import android.widget.Toast;

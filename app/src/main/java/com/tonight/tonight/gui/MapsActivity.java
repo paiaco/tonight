@@ -1,4 +1,4 @@
-package com.tonight.tonight.GUI;
+package com.tonight.tonight.gui;
 
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
@@ -9,11 +9,10 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.tonight.tonight.Infra.GuiUtil;
+import com.tonight.tonight.infra.GuiUtil;
 import com.tonight.tonight.R;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {

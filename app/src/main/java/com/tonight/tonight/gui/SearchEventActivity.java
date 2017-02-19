@@ -1,4 +1,4 @@
-package com.tonight.tonight.GUI;
+package com.tonight.tonight.gui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

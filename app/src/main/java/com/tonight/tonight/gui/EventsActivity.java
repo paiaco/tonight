@@ -18,6 +18,7 @@ import java.util.List;
 public class EventsActivity extends AppCompatActivity {
 
     private ListView listaEventos;
+    private static List<Evento> items = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,28 +27,30 @@ public class EventsActivity extends AppCompatActivity {
 
         listaEventos = (ListView) findViewById(R.id.listaEventos);
 
+/*
         Evento evento1 = new Evento("Ibura Rock Festival", "06/06/2017", "Prepare-se para o show de rock mais badalado da periferia. Organizado por Airton Samuel.");
         Evento evento2 = new Evento("Orquestra do Cordeiro toca Chopin 2", "07/07/2017", "Interpretação dos clássicos de Chopin pelo maestro João.");
 
-        List<Evento> items = new ArrayList<Evento>();
         items.add(evento1);
         items.add(evento2);
+*/
 
         EventoListAdapter eventoAdapter = new EventoListAdapter(this, 0, (ArrayList<Evento>) items);
 
         listaEventos.setAdapter(eventoAdapter);
 
-/*        listaEventos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Projeto projeto = (Projeto) parent.getAdapter().getItem(position);
-                sessao.setProjeto(projeto);
-
-                Intent intent = new Intent(MainActivity.this, ProjetoMainActivity.class);
-                //intent.putExtra("nome", projeto.getNome());
-                startActivity(intent);
-            }
-        });*/
-
     }
+
+    public static void addEvento(Evento ev) {
+        items.add(ev);
+    }
+
+    public void onButtonClickEvento(View v) {
+        if(v.getId() == R.id.buttonTelaCadastroEvento) {
+            Intent intent = new Intent(getApplicationContext(), CriaEventoActivity.class);
+            startActivity(intent);
+        }
+    }
+
+
 }

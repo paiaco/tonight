@@ -45,7 +45,8 @@
             android:name=".gui.MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".gui.SearchEventActivity" />
-        <activity android:name=".gui.EventsActivity"></activity>
+        <activity android:name=".gui.EventsActivity" />
+        <activity android:name=".gui.CriaEventoActivity"></activity>
     </application>
 
 </manifest>

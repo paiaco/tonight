@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_cria_evento"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.tonight.tonight.gui.CriaEventoActivity">
+
+
+    <TextView
+        android:id="@+id/tituloCampoCadastroNomeEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome do evento:"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/campoCadastroNomeEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:id="@+id/tituloCampoCadastroDataEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data:"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/campoCadastroNomeEvento" />
+
+    <EditText
+        android:id="@+id/campoCadastroDataEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:inputType="date"
+        android:layout_below="@+id/tituloCampoCadastroDataEvento"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/tituloCampoCadastroDescricaoEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descrição do evento:"
+        android:layout_below="@+id/campoCadastroDataEvento"
+        android:layout_marginTop="24dp"/>
+
+    <EditText
+        android:id="@+id/campoCadastroDescricaoEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/tituloCampoCadastroDescricaoEvento"/>
+
+    <Button
+        android:id="@+id/botaoCadastroEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/campoCadastroDescricaoEvento"
+        android:layout_centerHorizontal="true"
+        android:onClick="onButtonClickEvento"/>
+
+
+</RelativeLayout>

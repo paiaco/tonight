@@ -31,4 +31,12 @@
         android:layout_below="@id/abaTodos"
         android:layout_marginTop="24sp"/>
 
+    <Button
+        android:id="@+id/buttonTelaCadastroEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        android:layout_below="@+id/listaEventos"
+        android:onClick="onButtonClickEvento"/>
+
 </RelativeLayout>

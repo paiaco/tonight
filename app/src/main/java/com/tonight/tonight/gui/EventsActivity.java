@@ -27,7 +27,7 @@ public class EventsActivity extends AppCompatActivity {
         listaEventos = (ListView) findViewById(R.id.listaEventos);
 
         Evento evento1 = new Evento("Ibura Rock Festival", "06/06/2017", "Prepare-se para o show de rock mais badalado da periferia. Organizado por Airton Samuel.");
-        Evento evento2 = new Evento("Orquestra do Cordeiro toca Chopin", "07/07/2017", "Interpretação dos clássicos de Chopin pelo maestro João.");
+        Evento evento2 = new Evento("Orquestra do Cordeiro toca Chopin 2", "07/07/2017", "Interpretação dos clássicos de Chopin pelo maestro João.");
 
         List<Evento> items = new ArrayList<Evento>();
         items.add(evento1);

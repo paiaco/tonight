@@ -1,6 +1,8 @@
 package com.tonight.tonight.gui;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -35,9 +37,26 @@ public class EventsActivity extends AppCompatActivity {
         items.add(evento2);
 */
 
-        EventoListAdapter eventoAdapter = new EventoListAdapter(this, 0, (ArrayList<Evento>) items);
+        final EventoListAdapter eventoAdapter = new EventoListAdapter(this, 0, (ArrayList<Evento>) items);
 
         listaEventos.setAdapter(eventoAdapter);
+
+        listaEventos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                AlertDialog.Builder adb = new AlertDialog.Builder(EventsActivity.this);
+                adb.setTitle("Delete");
+                adb.setMessage("Confirmar remoção " + position);
+                final int positionToRemove = position;
+                adb.setNegativeButton("Cancelar", null);
+                adb.setPositiveButton("OK", new AlertDialog.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        items.remove(positionToRemove);
+                        eventoAdapter.notifyDataSetChanged();
+                    }});
+                adb.show();
+            }
+        });
 
     }
 

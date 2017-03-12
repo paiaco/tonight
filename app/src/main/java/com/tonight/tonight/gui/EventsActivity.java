@@ -45,11 +45,16 @@ public class EventsActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 AlertDialog.Builder adb = new AlertDialog.Builder(EventsActivity.this);
-                adb.setTitle("Delete");
-                adb.setMessage("Confirmar remoção " + position);
+                adb.setTitle("Evento");
+                adb.setMessage("O que deseja fazer?");
                 final int positionToRemove = position;
-                adb.setNegativeButton("Cancelar", null);
-                adb.setPositiveButton("OK", new AlertDialog.OnClickListener() {
+                adb.setNegativeButton("Compartilhar", new AlertDialog.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Evento evento = items.get(positionToRemove);
+                        returnName(evento);
+                    }
+                });
+                adb.setPositiveButton("Excluir", new AlertDialog.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         items.remove(positionToRemove);
                         eventoAdapter.notifyDataSetChanged();
@@ -69,6 +74,10 @@ public class EventsActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), CriaEventoActivity.class);
             startActivity(intent);
         }
+    }
+
+    public String returnName(Evento ev) {
+        return ev.getNome();
     }
 
 

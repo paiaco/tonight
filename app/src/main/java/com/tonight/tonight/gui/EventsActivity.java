@@ -51,7 +51,13 @@ public class EventsActivity extends AppCompatActivity {
                 adb.setNegativeButton("Compartilhar", new AlertDialog.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         Evento evento = items.get(positionToRemove);
-                        returnName(evento);
+                        /*returnName(evento);*/
+                        Intent intent= new Intent(Intent.ACTION_SEND);
+                        intent.setType("text/plain");
+                        intent.putExtra(android.content.Intent.EXTRA_SUBJECT, evento.getNome());
+                        intent.putExtra(android.content.Intent.EXTRA_TEXT, "Nome: " + evento.getNome() +
+                                                                        "\nDescrição: " + evento.getDescricao());
+                        startActivity(Intent.createChooser(intent, "Share via"));
                     }
                 });
                 adb.setPositiveButton("Excluir", new AlertDialog.OnClickListener() {

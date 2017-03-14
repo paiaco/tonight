@@ -26,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
             String senhaString = senha.getText().toString();
 
             Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
+            intent.putExtra("VALOR", "login");
             startActivity(intent);
 
         }

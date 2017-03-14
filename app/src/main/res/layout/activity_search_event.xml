@@ -48,7 +48,8 @@
         android:text="Buscar"
         android:layout_marginTop="36dp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/spinGeneroEvento"/>
+        android:layout_below="@+id/spinGeneroEvento"
+        android:onClick="onButtonClickSearchEvento"/>
 
     <TextView
         android:id="@+id/textOu"
@@ -77,7 +78,8 @@
         android:text="Buscar"
         android:layout_below="@+id/campoBuscaEventoNome"
         android:layout_marginTop="36dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:onClick="onButtonClickSearchEvento"/>
 
 
 
